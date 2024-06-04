@@ -16,4 +16,5 @@ def predict():
 
 
     if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=53169)
+    port = int(os.environ.get('PORT', 10000))  # Utilisez le port défini par la variable d'environnement PORT ou 53169 par défaut
+    app.run(debug=True, host='0.0.0.0', port=port)
